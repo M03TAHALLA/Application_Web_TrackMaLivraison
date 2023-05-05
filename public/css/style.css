@@ -836,8 +836,8 @@ p.section-para {
 /* ===== footer ======= */
 .footer {
 	padding: 30px 0;
-	background: rgb(6, 141, 180);
-	background: linear-gradient(309deg, rgba(6, 141, 180, 1) 0%, rgba(58, 44, 81, 1) 100%);
+	background: rgb(0, 0, 0);
+	background: linear-gradient(309deg, rgb(0, 0, 0) 0%, rgba(58,rgb(0, 0, 0)));
 }
 
 .footer-widget {
@@ -845,13 +845,13 @@ p.section-para {
 }
 
 .footer-widget p {
-	color: #eeeeee;
+	color: #ffffff;
 	letter-spacing: 0.3px;
 	line-height: 1.8;
 }
 
 .footer-widget h5 {
-	color: #eeeeee;
+	color: #ffffff;
 	margin-top: 40px;
 	letter-spacing: 0.5px;
 	font-size: 22px;
