@@ -114,7 +114,7 @@
                     <div class="tracking-icon status-complete">
                       <i class="fas fa-box"></i>
                     </div>
-                    <div class="tracking-content">Infos Colis : {{ $CountCode }} <span style="color: rgb(40, 180, 241);font-weight:bold">Tracking Code :</span> {{ $TrackingCode }}<span style="color: rgb(40, 180, 241);font-weight:bold">Ville : </span> {{ $Ville }}<span style="color: rgb(40, 180, 241);font-weight:bold">Destination : </span>{{ $Destination }}</div>
+                    <div class="tracking-content">Infos Colis :  <span style="color: rgb(40, 180, 241);font-weight:bold">Tracking Code :</span> {{ $TrackingCode }}<span style="color: rgb(40, 180, 241);font-weight:bold">Ville : </span> {{ $Ville }}<span style="color: rgb(40, 180, 241);font-weight:bold">Destination : </span>{{ $Destination }}</div>
                   </div>
                   <?php $i=0; ?>
                   @foreach ( $Tracking as $Tracking)
@@ -129,30 +129,30 @@
                     <div class="tracking-icon status-complete">
                       <i class="fas fa-thumbs-up"></i>
                     </div>
-                    <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} AM</span></div>
-                    <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                    <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} PM</span></div>
+                    <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: green">Confirmer</span><span>to : {{ $Tracking->Destination }}</span></div>
                   </div>
                   <div class="tracking-item tracking-active">
                     <div class="tracking-icon status-active">
                       <i class="fas fa-street-view"></i>
                     </div>
-                    <div class="tracking-date">{{  mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} AM</span></div>
-                    <div class="tracking-content">Arrived : {{ $Tracking->Destination }}<span>Shipped to Nearest Hub Sydney</span></div>
+                    <div class="tracking-date">{{  mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
+                    <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
                   </div>
                   @else
                       <div class="tracking-item">
                         <div class="tracking-icon status-complete">
                           <i class="fas fa-thumbs-up"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} AM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: green">Confirmer</span><span><i class="fas fa-truck"></i> : {{ $Tracking->Destination }}</span></div>
                       </div>
                       <div class="tracking-item">
                         <div class="tracking-icon status-complete">
                           <i class="fas fa-truck"></i>
                         </div>
-                        <div class="tracking-date">{{  mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} AM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Shipped to Melborne Hub</span></div>
+                        <div class="tracking-date">{{  mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
                       </div>
                   @endif
                   @endif
@@ -162,15 +162,15 @@
                         <div class="tracking-icon status-complete">
                           <i class="fas fa-thumbs-up"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }}  AM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }}  PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: green">Confirmer</span><span><i class="fas fa-truck"></i> : {{ $Tracking->Destination }}</span></div>
                       </div>
                       <div class="tracking-item tracking-active">
                         <div class="tracking-icon status-active">
                           <i class="fas fa-street-view"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} AM</span></div>
-                        <div class="tracking-content">Arrived : {{ $Tracking->Destination }}<span>Shipped to Nearest Hub Sydney</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
                       </div>
                   @endif  
 
@@ -182,15 +182,15 @@
                         <div class="tracking-icon status-complete">
                           <i class="fas fa-thumbs-up"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} AM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: rgb(0, 255, 0)">Confirmer</span><span><i class="fas fa-truck"></i> : {{ $Tracking->Destination }}</span></div>
                       </div>    
                       <div class="tracking-item">
                         <div class="tracking-icon status-complete">
                           <i class="fas fa-truck"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} AM</span></div>
-                        <div class="tracking-content">In Transit <span>{{ $Tracking->Destination }}</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
+                        <div class="tracking-content">Transit <span>{{ $Tracking->Destination }}</span></div>
                       </div>                      
                       @else
                           @if($Tracking->DestinationFinal == $Tracking->Destination )
@@ -198,30 +198,30 @@
                               <div class="tracking-icon status-complete">
                                 <i class="fas fa-thumbs-up"></i>
                               </div>
-                              <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} AM</span></div>
-                              <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                              <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: rgb(0, 255, 0)">Confirmer</span><span><i class="fas fa-truck"></i> : {{ $Tracking->Destination }}</span></div>
                             </div>   
                             <div class="tracking-item tracking-active">
                               <div class="tracking-icon status-active">
                                 <i class="fas fa-street-view"></i>
                               </div>
-                              <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ mb_substr($Tracking->DateRecption, +10) }} AM</span></div>
-                              <div class="tracking-content">Arrived : {{ $Tracking->Destination }}<span>Shipped to Nearest Hub Sydney</span></div>
+                              <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ mb_substr($Tracking->DateRecption, +10) }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
                             </div>
                             @else
                             <div class="tracking-item">
                               <div class="tracking-icon status-complete">
                                 <i class="fas fa-thumbs-up"></i>
                               </div>
-                              <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} AM</span></div>
-                              <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                              <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: rgb(0, 255, 0)">Confirmer</span><span><i class="fas fa-truck"></i> : {{ $Tracking->Destination }}</span></div>
                             </div>  
                             <div class="tracking-item">
                               <div class="tracking-icon status-complete">
                                 <i class="fas fa-truck"></i>
                               </div>
-                              <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} AM</span></div>
-                              <div class="tracking-content">In Transit <span>{{ $Tracking->Destination }}</span></div>
+                              <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
+                              <div class="tracking-content">Transit <span>{{ $Tracking->Destination }}</span></div>
                             </div>
                         @endif
                      
@@ -232,15 +232,15 @@
                         <div class="tracking-icon status-complete">
                           <i class="fas fa-thumbs-up"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} AM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Depart }}<span>Seller Confirmed your order</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateDepart, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateDepart , +10) }} PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Depart }}<span style="color: rgb(0, 255, 0)">Confirmer</span><span><i class="fas fa-truck"></i> : {{ $Tracking->Destination }}</span></div>
                       </div>
                       <div class="tracking-item tracking-active">
                         <div class="tracking-icon status-active">
                           <i class="fas fa-street-view"></i>
                         </div>
-                        <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ mb_substr($Tracking->DateRecption, +10) }} AM</span></div>
-                        <div class="tracking-content">Arrived : {{ $Tracking->Destination }}<span>Shipped to Nearest Hub Sydney</span></div>
+                        <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ mb_substr($Tracking->DateRecption, +10) }} PM</span></div>
+                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
                       </div>
                     @endif                          
 @endif
