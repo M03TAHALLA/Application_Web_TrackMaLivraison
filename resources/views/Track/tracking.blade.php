@@ -118,7 +118,7 @@
                       <i class="fas fa-street-view"></i>
                     </div>
                     <div class="tracking-date">{{  mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
-                    <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Destination }}<span>@if($Tracking->DateCloture == "") Colis Dans L'agence : {{ $Tracking->Destination }} @else Colis Livré le : {{ $Tracking->DateCloture }} PM @endif</span></div>
                   </div>
                   @else
                       <div class="tracking-item">
@@ -133,7 +133,7 @@
                           <i class="fas fa-truck"></i>
                         </div>
                         <div class="tracking-date">{{  mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Destination }}<span>@if($Tracking->DateCloture == "") Colis Dans L'agence :  {{ $Tracking->Destination }} @else Colis Livré le : {{ $Tracking->DateCloture }} PM @endif</span></div>
                       </div>
                   @endif
                   @endif
@@ -151,7 +151,7 @@
                           <i class="fas fa-street-view"></i>
                         </div>
                         <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ substr($Tracking->DateRecption , +10) }} PM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Destination }}<span>@if($Tracking->DateCloture == "") Colis Dans L'agence :  {{ $Tracking->Destination }} @else Colis Livré le : {{ $Tracking->DateCloture }} PM @endif</span></div>
                       </div>
                   @endif  
 
@@ -187,7 +187,7 @@
                                 <i class="fas fa-street-view"></i>
                               </div>
                               <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ mb_substr($Tracking->DateRecption, +10) }} PM</span></div>
-                              <div class="tracking-content">{{ $Tracking->Destination }}<span>@if($Tracking->DateCloture == "") Colis Dans L'agence @else Colis Livré le : {{ $Tracking->DateCloture }} PM @endif</span></div>
+                              <div class="tracking-content">{{ $Tracking->Destination }}<span>@if($Tracking->DateCloture == "") Colis Dans L'agence :  {{ $Tracking->Destination }} @else Colis Livré le : {{ $Tracking->DateCloture }} PM @endif</span></div>
                             </div>
                             @else
                             <div class="tracking-item">
@@ -221,7 +221,7 @@
                           <i class="fas fa-street-view"></i>
                         </div>
                         <div class="tracking-date">{{ mb_substr($Tracking->DateRecption, 0, -5, 'UTF-8') }}<span>{{ mb_substr($Tracking->DateRecption, +10) }} PM</span></div>
-                        <div class="tracking-content">{{ $Tracking->Destination }}<span>Colis Livré le : {{ $Tracking->DateCloture }} PM</span></div>
+                              <div class="tracking-content">{{ $Tracking->Destination }}<span>@if($Tracking->DateCloture == "") Colis Dans L'agence :  {{ $Tracking->Destination }} @else Colis Livré le : {{ $Tracking->DateCloture }} PM @endif</span></div>
                       </div>
                     @endif                          
 @endif
